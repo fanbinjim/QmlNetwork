@@ -17,6 +17,7 @@ QmlNetworkRequest::QmlNetworkRequest(QObject *parent)
 void QmlNetworkRequest::clear()
 {
     this->setRequest(QNetworkRequest());
+    this->m_request.setTransferTimeout(2000);
     Q_EMIT this->urlChanged(QUrl());
 }
 
